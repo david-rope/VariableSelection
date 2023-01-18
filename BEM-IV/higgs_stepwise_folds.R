@@ -23,7 +23,7 @@ library(MASS)
 kfolds <- 5
 totalIV <- matrix()
 for (i in 1:kfolds) { 
-  file_name <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Higgs/DataSets/train_smote_higgs_fold_", i, sep = "")
+  file_name <- paste(".../Higgs/DataSets/train_smote_higgs_fold_", i, sep = "")
   file_name <- paste(file_name, ".csv", sep = "")                                
   print(file_name)
   data_train <- read.csv(file_name, na = c("", "NA","?"))
@@ -63,7 +63,7 @@ for (i in 1:kfolds) {
   aucValueTrain<-AUC(predic_train, data_train$class)
   print(aucValueTrain)
     
-  model_name <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Higgs/BEM/stepwise_model_higgs_fold_", i, sep = "")
+  model_name <- paste(".../Higgs/BEM/stepwise_model_higgs_fold_", i, sep = "")
   model_name <- paste(model_name, ".rds", sep = "")                                
   print(model_name)
   
