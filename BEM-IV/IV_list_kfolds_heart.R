@@ -16,7 +16,7 @@ library(woeBinning)
 kfolds <- 5
 totalIV <- matrix()
 for (i in 1:kfolds) { 
-  file_name <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Heart/DataSets/train_smote_heart_fold_", i, sep = "")
+  file_name <- paste(".../Heart/DataSets/train_smote_heart_fold_", i, sep = "")
   file_name <- paste(file_name, ".csv", sep = "")                                
   print(file_name)
   data_train <- read.csv(file_name, na = c("", "NA","?"))
@@ -62,7 +62,7 @@ for (i in 1:kfolds) {
 }
 
 for (i in 1:kfolds) { 
-  fileOutputIV <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Heart/IVRank/IV_heart_fold_", i, sep = "")
+  fileOutputIV <- paste(".../Heart/IVRank/IV_heart_fold_", i, sep = "")
   fileOutputIV <- paste(fileOutputIV, ".txt", sep = "")   
   write.table(totalIV[,2*i-1], file=fileOutputIV, col.names = FALSE, row.names = FALSE, quote = FALSE)
 }
