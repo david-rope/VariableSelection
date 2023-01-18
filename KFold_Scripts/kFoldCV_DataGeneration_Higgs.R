@@ -21,8 +21,8 @@ library(caret)
 ##  
 ####################################
 
-file_train  <- "/home/david/R/PaperR/TestData/Higgs/data/train.csv"
-file_test <- "/home/david/R/PaperR/TestData/Higgs/data/test.csv"
+file_train  <- ".../Higgs/data/train.csv"
+file_test <- ".../Higgs/data/test.csv"
 data_train <- read.csv(file_train, na = c("", "NA","?"))
 data_test <- read.csv(file_test, na = c("", "NA","?"))
 
@@ -146,9 +146,9 @@ for (i in 1:kfolds) {
    df_test_output %>% select(-id)->df_test_output
    df_train_output %>% select(-id)->df_train_output
    
-   fileOuputTest <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Higgs/DataSets/test_higgs_fold_", i, sep = "")
+   fileOuputTest <- paste(".../Higgs/DataSets/test_higgs_fold_", i, sep = "")
    fileOuputTest <- paste(fileOuputTest, ".csv", sep = "")
-   fileOuputTrain <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Higgs/DataSets/train_smote_higgs_fold_", i, sep = "")
+   fileOuputTrain <- paste(".../Higgs/DataSets/train_smote_higgs_fold_", i, sep = "")
    fileOuputTrain <- paste(fileOuputTrain, ".csv", sep = "")
    write.csv(df_test_output, file=fileOuputTest, row.names = FALSE)
    write.csv(df_train_output, file=fileOuputTrain, row.names = FALSE)
