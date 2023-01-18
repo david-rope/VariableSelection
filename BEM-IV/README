@@ -1,0 +1,2 @@
+It might be necessary to change the file path names for input and output files. That in all files,
+In case of *_stepwise_folds.R files the output result are not save, you should save by yourself. They will be the threshold for the next step.
