@@ -21,7 +21,7 @@ library(caret)
 ##  
 ####################################
 
-file_name  <- "/home/david/R/PaperR/TestData/Heart/HeartAttackDataSet.csv"
+file_name  <- ".../Heart/HeartAttackDataSet.csv"
 data_train <- read.csv(file_name, na = c("", "NA","?"))
 
 nrow(data_train)
@@ -83,12 +83,7 @@ for (i in 1:kfolds) {
    assign(df_train, new_df_train)
 }
 
-nrow(new_df_train_0[new_df_test_0$target == "0", ])
-nrow(new_df_train_1[new_df_test_1$target == "1", ])
-nrow(new_df_test_0[new_df_test_0$target == "0", ])
-nrow(new_df_test_1[new_df_test_1$target == "1", ])
-
-   #####################################
+#####################################
 ##
 ##  Here, we apply the SMOTE method
 ##  for the train data set  
@@ -135,9 +130,9 @@ for (i in 1:kfolds) {
    df_test_output <- df_test_output[sample(nrow(df_test_output), nrow(df_test_output)), ]
    df_train_output <- df_train_output[sample(nrow(df_train_output), nrow(df_train_output)), ]
    
-   fileOuputTest <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Heart/DataSets/test_heart_fold_", i, sep = "")
+   fileOuputTest <- paste(".../Heart/DataSets/test_heart_fold_", i, sep = "")
    fileOuputTest <- paste(fileOuputTest, ".csv", sep = "")
-   fileOuputTrain <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Heart/DataSets/train_smote_heart_fold_", i, sep = "")
+   fileOuputTrain <- paste(".../Heart/DataSets/train_smote_heart_fold_", i, sep = "")
    fileOuputTrain <- paste(fileOuputTrain, ".csv", sep = "")
    write.csv(df_test_output, file=fileOuputTest, row.names = FALSE)
    write.csv(df_train_output, file=fileOuputTrain, row.names = FALSE)
