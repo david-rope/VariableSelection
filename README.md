@@ -5,7 +5,8 @@ Here, we present a simple variable selection method based on the Backward Elimin
 The next idea is divided in different stages because we used four classifiers, Logistic Regression, Decision Trees, Support Vector Machine and Multiple Layer Perceptron.
 
 The first one, it is preprocessing the data, deal with the unbalanced class problem and use K-fold cross validation.
-*DDFSDF
+
+- KFold_Scripts
 
 
 The second one, it is appying the BEM and the IV ranking.
