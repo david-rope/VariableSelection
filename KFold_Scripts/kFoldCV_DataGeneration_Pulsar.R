@@ -21,8 +21,8 @@ library(caret)
 ##  
 ####################################
 
-file_train  <- "/home/david/R/PaperR/TestData/Pulsar/pulsar_data_train.csv"
-file_test <- "/home/david/R/PaperR/TestData/Pulsar/pulsar_data_test.csv"
+file_train  <- ".../Pulsar/pulsar_data_train.csv"
+file_test <- ".../Pulsar/pulsar_data_test.csv"
 data_train <- read.csv(file_train, na = c("", "NA","?"))
 data_test <- read.csv(file_test, na = c("", "NA","?"))
 
@@ -141,9 +141,9 @@ for (i in 1:kfolds) {
    df_test_output <- df_test_output[sample(nrow(df_test_output), nrow(df_test_output)), ]
    df_train_output <- df_train_output[sample(nrow(df_train_output), nrow(df_train_output)), ]
    
-   fileOuputTest <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Pulsar/DataSets/test_pulsar_fold_", i, sep = "")
+   fileOuputTest <- paste(".../Pulsar/DataSets/test_pulsar_fold_", i, sep = "")
    fileOuputTest <- paste(fileOuputTest, ".csv", sep = "")
-   fileOuputTrain <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Pulsar/DataSets/train_smote_pulsar_fold_", i, sep = "")
+   fileOuputTrain <- paste(".../Pulsar/DataSets/train_smote_pulsar_fold_", i, sep = "")
    fileOuputTrain <- paste(fileOuputTrain, ".csv", sep = "")
    write.csv(df_test_output, file=fileOuputTest, row.names = FALSE)
    write.csv(df_train_output, file=fileOuputTrain, row.names = FALSE)
