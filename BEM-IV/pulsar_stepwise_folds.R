@@ -23,7 +23,7 @@ library(MASS)
 kfolds <- 5
 totalIV <- matrix()
 for (i in 1:kfolds) { 
-  file_name <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Pulsar/DataSets/train_smote_pulsar_fold_", i, sep = "")
+  file_name <- paste(".../Pulsar/DataSets/train_smote_pulsar_fold_", i, sep = "")
   file_name <- paste(file_name, ".csv", sep = "")                                
   print(file_name)
   data_train <- read.csv(file_name, na = c("", "NA","?"))
@@ -63,7 +63,7 @@ for (i in 1:kfolds) {
   aucValueTrain<-AUC(predic_train, data_train$target_class)
   print(aucValueTrain)
     
-  model_name <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Pulsar/BEM/stepwise_model_pulsar_fold_", i, sep = "")
+  model_name <- paste(".../Pulsar/BEM/stepwise_model_pulsar_fold_", i, sep = "")
   model_name <- paste(model_name, ".rds", sep = "")                                
   print(model_name)
   
