@@ -21,7 +21,7 @@ library(caret)
 ##  
 ####################################
 
-file_train  <- "/home/david/R/PaperR/TestData/CardFraud/creditcard.csv"
+file_train  <- ".../CardFraud/creditcard.csv"
 data_train <- read.csv(file_train, na = c("", "NA","?"))
 
 nrow(data_train)
@@ -83,11 +83,6 @@ for (i in 1:kfolds) {
    assign(df_train, new_df_train)
 }
 
-nrow(new_df_train_0[new_df_test_0$Class == "0", ])
-nrow(new_df_train_1[new_df_test_1$Class == "1", ])
-nrow(new_df_test_0[new_df_test_0$Class == "0", ])
-nrow(new_df_test_1[new_df_test_1$Class == "1", ])
-
 #####################################
 ##
 ##  Here, we apply the SMOTE method
@@ -135,9 +130,9 @@ for (i in 1:kfolds) {
    df_test_output <- df_test_output[sample(nrow(df_test_output), nrow(df_test_output)), ]
    df_train_output <- df_train_output[sample(nrow(df_train_output), nrow(df_train_output)), ]
    
-   fileOuputTest <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Fraud/DataSets/test_fraud_fold_", i, sep = "")
+   fileOuputTest <- paste(".../Fraud/DataSets/test_fraud_fold_", i, sep = "")
    fileOuputTest <- paste(fileOuputTest, ".csv", sep = "")
-   fileOuputTrain <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Fraud/DataSets/train_smote_fraud_fold_", i, sep = "")
+   fileOuputTrain <- paste(".../Fraud/DataSets/train_smote_fraud_fold_", i, sep = "")
    fileOuputTrain <- paste(fileOuputTrain, ".csv", sep = "")
    write.csv(df_test_output, file=fileOuputTest, row.names = FALSE)
    write.csv(df_train_output, file=fileOuputTrain, row.names = FALSE)
