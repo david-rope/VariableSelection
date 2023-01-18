@@ -1,4 +1,4 @@
-Variable Selection 
+# Variable Selection 
 
 We study the variable selection problem focus on binary classification problems.
 Here, we present a simple variable selection method based on the Backward Elimination Method (BEM) and a ranking of variables using the Information Value (IV).
