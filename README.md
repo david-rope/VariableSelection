@@ -8,8 +8,10 @@ The first one, it is preprocessing the data, deal with the unbalanced class prob
 
 - KFold_Scripts
 
-
 The second one, it is appying the BEM and the IV ranking.
+
+- BEM-IV
+
 Fanally, build the required classifiers using the IV ranking and the threshold gotten from the BEM.
 
 Note: we used two different machine for this study. Then, it is possible you need to modify some scripts.
