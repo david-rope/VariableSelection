@@ -16,7 +16,7 @@ library(woeBinning)
 kfolds <- 5
 totalIV <- matrix()
 for (i in 1:kfolds) { 
-  file_name <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Higgs/DataSets/train_smote_higgs_fold_", i, sep = "")
+  file_name <- paste(".../Higgs/DataSets/train_smote_higgs_fold_", i, sep = "")
   file_name <- paste(file_name, ".csv", sep = "")                                
   print(file_name)
   data_train <- read.csv(file_name, na = c("", "NA","?"))
@@ -70,7 +70,7 @@ for (i in 1:kfolds) {
 }
 
 for (i in 1:kfolds) { 
-  fileOutputIV <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Higgs/IVRank/IV_higgs_fold_", i, sep = "")
+  fileOutputIV <- paste(".../Higgs/IVRank/IV_higgs_fold_", i, sep = "")
   fileOutputIV <- paste(fileOutputIV, ".txt", sep = "")   
   write.table(totalIV[,2*i-1], file=fileOutputIV, col.names = FALSE, row.names = FALSE, quote = FALSE)
 }
