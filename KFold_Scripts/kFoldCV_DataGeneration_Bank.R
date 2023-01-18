@@ -21,8 +21,8 @@ library(caret)
 ##  
 ####################################
 
-file_train  <- "/home/david/R/PaperR/TestData/Bank/new_train.csv"
-file_test <- "/home/david/R/PaperR/TestData/Bank/new_test.csv"
+file_train  <- ".../Bank/new_train.csv"
+file_test <- ".../Bank/new_test.csv"
 data_train <- read.csv(file_train, na = c("", "NA","?"))
 data_test <- read.csv(file_test, na = c("", "NA","?"))
 
@@ -50,23 +50,10 @@ nrow(data_test)
 ncol(data_train)
 ncol(data_test)
 str(data_train)
+
 ##################
 ## Preparing for smote method
 ##################
-xtabs( ~ y + job, data = data_train )
-xtabs( ~ y + marital, data = data_train )
-xtabs( ~ y + education, data = data_train )
-xtabs( ~ y + default, data = data_train )
-xtabs( ~ y + housing, data = data_train )
-xtabs( ~ y + loan, data = data_train )
-xtabs( ~ y + contact, data = data_train )
-xtabs( ~ y + month, data = data_train )
-xtabs( ~ y + day_of_week, data = data_train )
-xtabs( ~ y + previous, data = data_train )
-xtabs( ~ y + poutcome, data = data_train )
-
-View(data_train)
-
 delrow <- which(grepl("yes", data_train$default))
 data_train <- data_train[-delrow, ]
 delrow
@@ -119,24 +106,6 @@ for (i in 1:kfolds) {
    assign(df_train, new_df_train)
 }
 
-nrow(new_df_train_0[new_df_test_0$y == "no", ])
-nrow(new_df_train_1[new_df_test_1$y == "yes", ])
-nrow(new_df_test_0[new_df_test_0$y == "no", ])
-nrow(new_df_test_1[new_df_test_1$y == "yes", ])
-
-
-nlevels(df_train_fold_1$default)
-nlevels(df_test_fold_1$default)
-nlevels(df_train_fold_2$default)
-nlevels(df_test_fold_2$default)
-nlevels(df_train_fold_3$default)
-nlevels(df_test_fold_3$default)
-nlevels(df_train_fold_4$default)
-nlevels(df_test_fold_4$default)
-nlevels(df_train_fold_5$default)
-nlevels(df_test_fold_5$default)
-
-
 #####################################
 ##
 ##  Here, we apply the SMOTE method
@@ -170,9 +139,9 @@ for (i in 1:kfolds) {
    df_test_output <- df_test_output[sample(nrow(df_test_output), nrow(df_test_output)), ]
    df_train_output <- df_train_output[sample(nrow(df_train_output), nrow(df_train_output)), ]
    str(df_test_output)
-   fileOuputTest <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Bank/DataSets/test_bank_fold_", i, sep = "")
+   fileOuputTest <- paste(".../Bank/DataSets/test_bank_fold_", i, sep = "")
    fileOuputTest <- paste(fileOuputTest, ".csv", sep = "")
-   fileOuputTrain <- paste("/home/david/R/PaperR/TestData/KFoldsCVSMOTE/Bank/DataSets/train_smote_bank_fold_", i, sep = "")
+   fileOuputTrain <- paste(".../Bank/DataSets/train_smote_bank_fold_", i, sep = "")
    fileOuputTrain <- paste(fileOuputTrain, ".csv", sep = "")
    write.csv(df_test_output, file=fileOuputTest, row.names = FALSE)
    write.csv(df_train_output, file=fileOuputTrain, row.names = FALSE)
