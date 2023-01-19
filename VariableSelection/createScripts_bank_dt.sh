@@ -3,7 +3,7 @@
 # Script to create a rank list with respect with their separation
 # Usage: 
 
-# Which root script do I use? (Write name without extension. Check script/ directory)
+# Write name without extension. Check script/ directory
 SCRIPT=IV_DT_template_bank
 
 # R Root version
