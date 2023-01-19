@@ -15,8 +15,8 @@ library(dplyr)
 ##  
 ####################################
 
-file_train  <- "/data1/David/BashR/KFoldsCV/Heart/DataSets/train_smote_heart_fold_5.csv"
-file_test <- "/data1/David/BashR/KFoldsCV/Heart/DataSets/test_heart_fold_5.csv"
+file_train  <- ".../Heart/DataSets/train_smote_heart_fold_5.csv"
+file_test <- ".../Heart/DataSets/test_heart_fold_5.csv"
 data_train <- read.csv(file_train, na = c("", "NA","?"))
 data_test <- read.csv(file_test, na = c("", "NA","?"))
 
@@ -66,5 +66,5 @@ results <- list(target_train = data_train$target, predic_train = predic.train,
                 tiempo = total_time)
 
 saveRDS(results,
-        "/data1/David/OutputR/KFoldsCV/Heart/LR/Fold5/LR_results_heart_iv_NVAR.rds")
-saveRDS(lr.model, "/data1/David/OutputR/KFoldsCV/Heart/LR/Fold5/LR_model_heart_iv_NVAR.rds")
+        ".../Heart/LR/Fold5/LR_results_heart_iv_NVAR.rds")
+saveRDS(lr.model, ".../Heart/LR/Fold5/LR_model_heart_iv_NVAR.rds")
