@@ -16,8 +16,8 @@ library(C50)
 ##  
 ####################################
 
-file_train  <- "/data1/David/BashR/KFoldsCV/Bank/DataSets/train_smote_bank_fold_5.csv"
-file_test <- "/data1/David/BashR/KFoldsCV/Bank/DataSets/test_bank_fold_5.csv"
+file_train  <- ".../Bank/DataSets/train_smote_bank_fold_5.csv"
+file_test <- ".../DataSets/test_bank_fold_5.csv"
 data_train <- read.csv(file_train, na = c("", "NA","?"))
 data_test <- read.csv(file_test, na = c("", "NA","?"))
 
@@ -67,5 +67,5 @@ results <- list(target_train = data_train$y, predic_train = predic.train,
                 tiempo = total_time)
 
 saveRDS(results,
-        "/data1/David/OutputR/KFoldsCV/Bank/DT/Fold5/DT_results_bank_iv_NVAR.rds")
-saveRDS(dt.model, "/data1/David/OutputR/KFoldsCV/Bank/DT/Fold5/DT_model_bank_iv_NVAR.rds")
+        ".../Bank/DT/Fold5/DT_results_bank_iv_NVAR.rds")
+saveRDS(dt.model, ".../Bank/DT/Fold5/DT_model_bank_iv_NVAR.rds")
