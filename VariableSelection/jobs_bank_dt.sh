@@ -1,8 +1,8 @@
 #!/bin/bash
 
 BATCH='qsub'
-
-INPUTDIR=/data1/David/BashR/KFoldsCV/Bank/ScriptsDT_F5
+# Check script/ directory
+INPUTDIR=/Bank/ScriptsDT_F5
 
 # Where am I?
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
