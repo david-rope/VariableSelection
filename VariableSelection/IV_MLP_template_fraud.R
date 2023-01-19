@@ -14,8 +14,8 @@ library(dplyr)
 ##  
 ####################################
 
-file_train  <- "/data1/David/BashR/KFoldsCV/Fraud/DataSets/train_smote_fraud_fold_5.csv"
-file_test <- "/data1/David/BashR/KFoldsCV/Fraud/DataSets/test_fraud_fold_5.csv"
+file_train  <- ".../Fraud/DataSets/train_smote_fraud_fold_5.csv"
+file_test <- ".../Fraud/DataSets/test_fraud_fold_5.csv"
 data_train <- read.csv(file_train, na = c("", "NA","?"))
 data_test <- read.csv(file_test, na = c("", "NA","?"))
 
@@ -87,5 +87,5 @@ results <- list(target_train = y_train, predic_train = predic.train,
                      target_test = y_test, predic_test = predic.test)
 
 saveRDS(results,
-        "/data1/David/OutputR/KFoldsCV/Fraud/MLP/Fold5/MLP_results_fraud_iv_NVAR.rds")
-saveRDS(snns.model, "/data1/David/OutputR/KFoldsCV/Fraud/MLP/Fold5/MLP_model_fraud_iv_NVAR.rds")
+        ".../Fraud/MLP/Fold5/MLP_results_fraud_iv_NVAR.rds")
+saveRDS(snns.model, ".../Fraud/MLP/Fold5/MLP_model_fraud_iv_NVAR.rds")
