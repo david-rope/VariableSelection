@@ -2,7 +2,7 @@
 
 BATCH='qsub'
 
-INPUTDIR=/data1/David/BashR/KFoldsCV/Pulsar/ScriptsSVM_F5
+INPUTDIR=/Pulsar/ScriptsSVM_F5
 
 # Where am I?
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
