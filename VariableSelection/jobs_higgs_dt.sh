@@ -2,7 +2,8 @@
 
 BATCH='qsub'
 
-INPUTDIR=/data1/David/BashR/KFoldsCV/Higgs/ScriptsDT_F5
+# Check script/ directory
+INPUTDIR=/Higgs/ScriptsDT_F5
 
 # Where am I?
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
