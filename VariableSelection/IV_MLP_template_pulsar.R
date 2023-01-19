@@ -14,8 +14,8 @@ library(dplyr)
 ##  
 ####################################
 
-file_train  <- "/data1/David/BashR/KFoldsCV/Pulsar/DataSets/train_smote_pulsar_fold_5.csv"
-file_test <- "/data1/David/BashR/KFoldsCV/Pulsar/DataSets/test_pulsar_fold_5.csv"
+file_train  <- ".../Pulsar/DataSets/train_smote_pulsar_fold_5.csv"
+file_test <- ".../Pulsar/DataSets/test_pulsar_fold_5.csv"
 data_train <- read.csv(file_train, na = c("", "NA","?"))
 data_test <- read.csv(file_test, na = c("", "NA","?"))
 
@@ -87,5 +87,5 @@ results <- list(target_train = y_train, predic_train = predic.train,
                      target_test = y_test, predic_test = predic.test)
 
 saveRDS(results,
-        "/data1/David/OutputR/KFoldsCV/Pulsar/MLP/Fold5/MLP_results_pulsar_iv_NVAR.rds")
-saveRDS(snns.model, "/data1/David/OutputR/KFoldsCV/Pulsar/MLP/Fold5/MLP_model_pulsar_iv_NVAR.rds")
+        ".../Pulsar/MLP/Fold5/MLP_results_pulsar_iv_NVAR.rds")
+saveRDS(snns.model, ".../Pulsar/MLP/Fold5/MLP_model_pulsar_iv_NVAR.rds")
