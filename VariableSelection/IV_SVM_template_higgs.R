@@ -16,8 +16,8 @@ library(e1071)
 ##  
 ####################################
 
-file_train  <- "/data1/David/BashR/KFoldsCV/Higgs/DataSets/train_smote_higgs_fold_5.csv"
-file_test <- "/data1/David/BashR/KFoldsCV/Higgs/DataSets/test_higgs_fold_5.csv"
+file_train  <- ".../Higgs/DataSets/train_smote_higgs_fold_5.csv"
+file_test <- ".../Higgs/DataSets/test_higgs_fold_5.csv"
 data_train <- read.csv(file_train, na = c("", "NA","?"))
 data_test <- read.csv(file_test, na = c("", "NA","?"))
 
@@ -71,5 +71,5 @@ results <- list(target_train = data_train$class, predic_train = result.train,
                 tiempo = total_time)
 
 saveRDS(results,
-        "/data1/David/OutputR/KFoldsCV/Higgs/SVM/Fold5/SVM_results_higgs_iv_NVAR.rds")
-saveRDS(svm.model, "/data1/David/OutputR/KFoldsCV/Higgs/SVM/Fold5/SVM_model_higgs_iv_NVAR.rds")
+        ".../Higgs/SVM/Fold5/SVM_results_higgs_iv_NVAR.rds")
+saveRDS(svm.model, ".../Higgs/SVM/Fold5/SVM_model_higgs_iv_NVAR.rds")
