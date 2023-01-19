@@ -16,8 +16,8 @@ library(e1071)
 ##  
 ####################################
 
-file_train  <- "/data1/David/BashR/KFoldsCV/Fraud/DataSets/train_smote_fraud_fold_5.csv"
-file_test <- "/data1/David/BashR/KFoldsCV/Fraud/DataSets/test_fraud_fold_5.csv"
+file_train  <- ".../Fraud/DataSets/train_smote_fraud_fold_5.csv"
+file_test <- ".../Fraud/DataSets/test_fraud_fold_5.csv"
 data_train <- read.csv(file_train, na = c("", "NA","?"))
 data_test <- read.csv(file_test, na = c("", "NA","?"))
 
@@ -70,5 +70,5 @@ results <- list(target_train = data_train$Class, predic_train = result.train,
                 tiempo = total_time)
 
 saveRDS(results,
-        "/data1/David/OutputR/KFoldsCV/Fraud/SVM/Fold5/SVM_results_fraud_iv_NVAR.rds")
-saveRDS(svm.model, "/data1/David/OutputR/KFoldsCV/Fraud/SVM/Fold5/SVM_model_fraud_iv_NVAR.rds")
+        ".../Fraud/SVM/Fold5/SVM_results_fraud_iv_NVAR.rds")
+saveRDS(svm.model, ".../Fraud/SVM/Fold5/SVM_model_fraud_iv_NVAR.rds")
