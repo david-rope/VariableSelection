@@ -6,13 +6,8 @@
 # Write name without extension. Check script/ directory
 SCRIPT=IV_DT_template_bank
 
-# R Root version
-#source /home/david/Software/Root/root-6.20.04/compile/bin/thisroot.sh
-
 # Where am I?
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# root ${SCRIPT}_all.C > variables.txt
 
 nline=$(grep -n LOGISTIC ${SCRIPT}.R | cut -d : -f 1)
 
