@@ -16,8 +16,8 @@ library(C50)
 ##  
 ####################################
 
-file_train  <- "/data1/David/BashR/KFoldsCV/Pulsar/DataSets/train_smote_pulsar_fold_5.csv"
-file_test <- "/data1/David/BashR/KFoldsCV/Pulsar/DataSets/test_pulsar_fold_5.csv"
+file_train  <- ".../Pulsar/DataSets/train_smote_pulsar_fold_5.csv"
+file_test <- ".../Pulsar/DataSets/test_pulsar_fold_5.csv"
 data_train <- read.csv(file_train, na = c("", "NA","?"))
 data_test <- read.csv(file_test, na = c("", "NA","?"))
 
@@ -67,5 +67,5 @@ results <- list(target_train = data_train$target_class, predic_train = predic.tr
                 tiempo = total_time)
 
 saveRDS(results,
-        "/data1/David/OutputR/KFoldsCV/Pulsar/DT/Fold5/DT_results_pulsar_iv_NVAR.rds")
-saveRDS(dt.model, "/data1/David/OutputR/KFoldsCV/Pulsar/DT/Fold5/DT_model_pulsar_iv_NVAR.rds")
+        ".../Pulsar/DT/Fold5/DT_results_pulsar_iv_NVAR.rds")
+saveRDS(dt.model, ".../Pulsar/DT/Fold5/DT_model_pulsar_iv_NVAR.rds")
