@@ -16,8 +16,8 @@ library(e1071)
 ##  
 ####################################
 
-file_train  <- "/data1/David/BashR/KFoldsCV/Heart/DataSets/train_smote_heart_fold_5.csv"
-file_test <- "/data1/David/BashR/KFoldsCV/Heart/DataSets/test_heart_fold_5.csv"
+file_train  <- ".../Heart/DataSets/train_smote_heart_fold_5.csv"
+file_test <- ".../Heart/DataSets/test_heart_fold_5.csv"
 data_train <- read.csv(file_train, na = c("", "NA","?"))
 data_test <- read.csv(file_test, na = c("", "NA","?"))
 
@@ -70,5 +70,5 @@ results <- list(target_train = data_train$target, predic_train = result.train,
                 tiempo = total_time)
 
 saveRDS(results,
-        "/data1/David/OutputR/KFoldsCV/Heart/SVM/Fold5/SVM_results_heart_iv_NVAR.rds")
-saveRDS(svm.model, "/data1/David/OutputR/KFoldsCV/Heart/SVM/Fold5/SVM_model_heart_iv_NVAR.rds")
+        ".../Heart/SVM/Fold5/SVM_results_heart_iv_NVAR.rds")
+saveRDS(svm.model, ".../Heart/SVM/Fold5/SVM_model_heart_iv_NVAR.rds")
