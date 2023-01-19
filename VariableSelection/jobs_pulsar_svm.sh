@@ -2,6 +2,7 @@
 
 BATCH='qsub'
 
+# Check script/ directory
 INPUTDIR=/Pulsar/ScriptsSVM_F5
 
 # Where am I?
