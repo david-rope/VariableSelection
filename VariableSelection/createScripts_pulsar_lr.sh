@@ -1,18 +1,13 @@
 #!/bin/bash
 
-# Script to create a rank list with respect with their separation
+# Script to create a rank list with respect with their IV
 # Usage: 
 
-# Which root script do I use? (Write name without extension. Check script/ directory)
+# Write name without extension. Check script/ directory
 SCRIPT=IV_LR_template_pulsar
-
-# R Root version
-#source /home/david/Software/Root/root-6.20.04/compile/bin/thisroot.sh
 
 # Where am I?
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# root ${SCRIPT}_all.C > variables.txt
 
 nline=$(grep -n LOGISTIC ${SCRIPT}.R | cut -d : -f 1)
 
