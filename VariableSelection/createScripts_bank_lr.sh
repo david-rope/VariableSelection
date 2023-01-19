@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script to create a rank list with respect with their separation
+# Script to create a rank list with respect with their IV
 # Usage: 
 
 # Write name without extension. Check script/ directory
