@@ -1,0 +1,9 @@
+Here, we can find a necessary scripts to create each classifier and running in an independent way or parallel (a specific way).
+
+First, using the ranking list gotten from BEM-IV, the scripts for each classifier is created.
+Two files are riquired, IV_CLASSIFIER_template_DATASET.R and the corresding file with the ranking of variables 
+(also the IV_CLASSIFIER_template_DATASET_r.R to restart the script). 
+
+Then, the jobs_DATASET_CLASSIFIER.sh run each of the previous scripts. 
+
+Note: In all cases check the input and output files. The path of the files depends on the user's way of working.
