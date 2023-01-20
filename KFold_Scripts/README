@@ -1,3 +1,6 @@
 Before use these script download the necessary datasets and chage the corresponding file path name.
 Datasets:
 - Higgs: https://www.kaggle.com/mragpavank/higs-bonsons-and-background-process/tasks?taskId=3370
+- Card fraud detection: https://www.kaggle.com/mlg-ulb/creditcardfraud
+- Pulsar star: https://www.kaggle.com/colearninglounge/predicting-pulsar-starintermediate 
+- Heart attack: https://www.kaggle.com/pritsheta/heart-attack
