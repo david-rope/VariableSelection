@@ -1,4 +1,5 @@
-Before use these script download the necessary datasets and chage the corresponding file path name.
+Before use these script download the necessary datasets and change the corresponding files path names.
+
 Datasets:
 - Higgs: https://www.kaggle.com/mragpavank/higs-bonsons-and-background-process/tasks?taskId=3370
 - Card fraud detection: https://www.kaggle.com/mlg-ulb/creditcardfraud
