@@ -1,0 +1,3 @@
+After building each classifier for a specific dataset from the VariableSelection folder it possible to plot the results with these scripts.
+These plots include the results gotten from the BEM which are inside BEM-IV folder and they must be manually copied.
+Note: you must change the files path names. Also, it is necessary setting the plot parameters for each case.
