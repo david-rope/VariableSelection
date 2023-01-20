@@ -5,3 +5,6 @@ Datasets:
 - Card fraud detection: https://www.kaggle.com/mlg-ulb/creditcardfraud
 - Pulsar star: https://www.kaggle.com/colearninglounge/predicting-pulsar-starintermediate 
 - Heart attack: https://www.kaggle.com/pritsheta/heart-attack
+
+
+Note: In all cases check the input and output files. The path of the files depends on the user's way of working.
