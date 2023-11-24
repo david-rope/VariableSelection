@@ -17,7 +17,7 @@ Fanally, build the required classifiers using the IV ranking and the threshold g
 - VariableSelection
 
 Here, it is possible to use a single file to build all necessary classifiers (not parallel), however, we use different files to build them.
-This is because SVM and MLP can take a little time.
+This is because SVM and MLP can take a little while.
 
 
 Note: we used two different machine for this study. Then, it is possible you need to modify some scripts.
